@@ -611,7 +611,6 @@ if (shortSlider && shortPrev && shortNext) {
     };
 }
 
-
 /* =========================================================
    CLIENT VIDEO CONTROLS
 ========================================================= */
@@ -619,7 +618,7 @@ if (shortSlider && shortPrev && shortNext) {
 document.addEventListener("DOMContentLoaded", () => {
 
     const clientVideos = document.querySelectorAll(
-        ".client-video-wrap video"
+        ".brand-video video, .client-video-wrap video"
     );
 
     clientVideos.forEach((video) => {
@@ -627,11 +626,9 @@ document.addEventListener("DOMContentLoaded", () => {
         video.addEventListener("play", () => {
 
             clientVideos.forEach((otherVideo) => {
-
                 if (otherVideo !== video) {
                     otherVideo.pause();
                 }
-
             });
 
         });
